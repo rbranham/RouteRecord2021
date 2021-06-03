@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:route_record_admin_portal/models/route.dart';
+import 'package:route_record_admin_portal/screens/home/routes/route_entry.dart';
 import 'package:route_record_admin_portal/screens/home/routes/route_tile.dart';
 import 'package:route_record_admin_portal/services/database.dart';
 
@@ -76,6 +77,15 @@ class _RouteListWrapperState extends State<RouteListWrapper> {
         ),
         Divider(),
         RouteList(),
+        TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RouteEntryWrapper()), //Push entry page on top
+              );
+            } ,
+            child: Text("Add Route")
+        ),
       ],
     ),
     );

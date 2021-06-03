@@ -24,7 +24,7 @@ class DatabaseService {
 
   //----------------------------------Routes------------------------------- \\
 
-  //Add Route - Shouldn't be needed for Driver app, but writing it now for populating testdata
+  //Add Route
   Future addRoute(BusRoute r){
 
     return routeCollection.add(r)
