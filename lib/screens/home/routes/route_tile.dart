@@ -22,7 +22,7 @@ class RouteTile extends StatelessWidget {
           title: Text(route.destination),
           subtitle: Text('${route.date} - ${route.scheduledStartTime}'),
           onTap: () {
-            print("Tapped ${route.destination}");
+            print("Opening details page for: ${route.destination}");
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => RouteDetail(route: route,)),
