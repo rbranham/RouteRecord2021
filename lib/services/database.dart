@@ -12,6 +12,7 @@ class DatabaseService {
   final String uid;
   DatabaseService({ this.uid });
 
+  //TODO: Fix this with admin fields
   Future updateUserData(String sugars, String name, int strength) async {
 
     return await adminCollection.doc(uid).set({
@@ -43,7 +44,8 @@ class DatabaseService {
   //STREAM VERSION
   Stream<List<BusRoute>> get allRoutes {
     //return _busRouteListFromSnapshot(routeCollection.snapshots()); //This way doesn't return a stream for some reason?
-    return routeCollection.snapshots()
+    Query adminOnly = routeCollection.where('adminID', isEqualTo: uid);
+    return adminOnly.snapshots()//Should only get ones with matching admin id
         .map(_busRouteListFromSnapshot);
   }
 
