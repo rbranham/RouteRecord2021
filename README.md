@@ -1,6 +1,10 @@
 # route_record_admin_portal
 
 Admin Portal for Route Record. Is web access portal only.
-Used by bus company administrators to manage their drivers, routes, and schools. 
+Used by school bus company administrators to manage their drivers, routes, and schools. 
+Has companion driver application, and school application. 
+
+Uses Dart language and Flutter framework. Uses Google Firestore database. 
 
 
+As of August, 2021 project has gone stagnant. 
